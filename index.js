@@ -1,4 +1,8 @@
 const express = require("express");
+const mysql = require("mysql");
+const dbConfig = require("./config/db.js");
+const connection = mysql.createConnection(dbConfig);
+
 const app = express();
 
 app.use(express.static("public"));
